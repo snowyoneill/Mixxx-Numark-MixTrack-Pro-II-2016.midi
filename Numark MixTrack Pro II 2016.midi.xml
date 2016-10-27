@@ -1,0 +1,1120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MixxxControllerPreset mixxxVersion="1.11.0+" schemaVersion="1">
+    <info>
+        <name>Numark MixTrack Pro II 2016</name>
+        <author>SNOWY, Armen Rizal, special thanks to Thomas Preston and Ricecows (rj@ricecows.net)</author>
+        <description>Version v1.0</description>
+        <forums></forums>
+        <wiki>http://www.mixxx.org/wiki/doku.php/numark_mixtrack_pro_ii</wiki>
+    </info>
+    <controller id="Numark MixTrack Pro II">
+        <scriptfiles>
+            <file functionprefix="NumarkMixTrackProII" filename="Numark-Mixtrack-Pro-II-scripts-2016.js"/>
+        </scriptfiles>
+        <controls>
+
+<!-- Browser knob press select. Temp fix. Key 1x1 -->
+<!-- Attention Look through downloaded MixTrackPro files for something -->	
+            <control>
+                <group>[Playlist]</group>
+                <key>NumarkMixTrackProII.pressKnob</key>
+                <status>0x90</status>
+                <midino>0x76</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Browser scroll. Key 1x2 -->
+<!-- Attention Look through downloaded MixTrackPro files for something -->
+            <control>
+                <group>[Playlist]</group>
+                <key>NumarkMixTrackProII.selectKnob</key>
+                <status>0xB0</status>
+                <midino>0x1A</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Load Deck A. Key 2a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.load_selected_track</key>
+                <status>0x90</status>
+                <midino>0x4B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Load Deck B. Key 2b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.load_selected_track</key>
+                <status>0x90</status>
+                <midino>0x34</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Back Button. Key 3 -->
+<!-- Attention Look through downloaded MixTrackPro files for something -->		
+            <control>
+                <group>[Playlist]</group>
+                <key>NumarkMixTrackProII.backButton</key>
+                <status>0x90</status>
+                <midino>0x77</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Shift function.. Mapped to key 4a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.shift</key>
+                <status>0x90</status>
+                <midino>0x61</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Shift function.. Mapped to key 4b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.shift</key>
+                <status>0x90</status>
+                <midino>0x62</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>			
+
+<!-- Play Deck A. Key 5a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.play</key>
+                <status>0x90</status>
+                <midino>0x3B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>           
+
+<!-- Play Deck B, key 5b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.play</key>
+                <status>0x90</status>
+                <midino>0x42</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Cue Button Deck A. Key 6a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x80</status>
+                <midino>0x51</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x51</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Cue Button Deck B. Key 6b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x80</status>
+                <midino>0x52</midino>
+                <options>
+	             <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x52</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Cue point Deck A. Key 7a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.cuebutton</key>
+                <status>0x90</status>
+                <midino>0x33</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Cue point Deck B. Key 7b -->
+
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.cuebutton</key>
+                <status>0x90</status>
+                <midino>0x3C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Jog wheel touch a. Key 8a1 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.wheelTouch</key>
+                <status>0x90</status>
+                <midino>0x4D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Jog wheel touch b. Key 8b1 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.wheelTouch</key>
+                <status>0x90</status>
+                <midino>0x4E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Jogwheel pitch, Deck A. Key 8a2 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.jogWheel</key>
+                <status>0xB0</status>
+                <midino>0x19</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Jogwheel Pitch, Deck B. Key 8b2 -->
+            <control>
+                <group>[Channel2]</group>
+				<key>NumarkMixTrackProII.jogWheel</key>
+                <status>0xB0</status>
+                <midino>0x18</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Toggle Scratch mode Deck A. Key 9a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.toggleScratchMode</key>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Toggle Scratch mode Deck B. Key 9b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.toggleScratchMode</key>
+                <status>0x90</status>
+                <midino>0x50</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch Fade Deck A. Key 10a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.pitch</key>
+                <status>0xB0</status>
+                <midino>0x0D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch Fade Deck B. Key 10b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.pitch</key>
+                <status>0xB0</status>
+                <midino>0x0E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch bend down Deck A, key 11a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.pitch_bend_down_or_keylock</key>
+                <status>0x90</status>
+                <midino>0x43</midino>
+                <options>
+                   <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch Bend Down, Deck B. Key 11b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.pitch_bend_down_or_keylock</key>
+                <status>0x90</status>
+                <midino>0x45</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch Bend Up, Deck A. Key 12a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.pitch_bend_up_or_range</key>
+                <status>0x90</status>
+                <midino>0x44</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Pitch bend Up Deck B. Key 12b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.pitch_bend_up_or_range</key>
+                <status>0x90</status>
+                <midino>0x46</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Sync Deck A. Key 13a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.beatsync</key>
+                <status>0x90</status>
+                <midino>0x40</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Sync Deck B. Key 13b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.beatsync</key>
+                <status>0x90</status>
+                <midino>0x47</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>			
+
+<!-- Flanger depth. Key 14a1 (FX1 Knob Deck A) -->
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
+                <status>0xB0</status>
+                <midino>0x1B</midino>
+                <options>
+                    <!--<diff/>-->
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Key 14b1 (FX1 Knob Deck B) -->
+            <control>
+                <group>[Flanger]</group>
+                <key>lfoPeriod</key>
+                <status>0xB0</status>
+                <midino>0x1E</midino>
+                <options>
+                    <diff/>
+                </options>
+            </control>
+
+<!-- Flanger delay. Key 14a2 (FX2 Knob Deck A) -->
+<!-- Attention, not matching original function -->
+            <control>
+               <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
+                <status>0xB0</status>
+                <midino>0x1C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Key 14b2 (FX2 Knob Deck B) -->
+<!-- Attention, not matching original function -->
+            <control>
+               <group>[Flanger]</group>
+                <key>lfoDepth</key>
+                <status>0xB0</status>
+                <midino>0x1F</midino>
+                <options>
+                    <diff/>
+                </options>
+            </control>
+
+<!-- Flanger period. Key 14a3 (FX3 Knob Deck A) -->
+<!-- Attention, not matching original function -->
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
+                <status>0xB0</status>
+                <midino>0x1D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Key 14b3 (FX3 Knob Deck B) -->
+<!-- Attention, not matching original function -->
+            <control>
+                <group>[Flanger]</group>
+                <key>lfoDelay</key>
+                <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <diff/>
+                </options>
+            </control>
+
+<!-- Key 15a (Beats Deck A) -->
+<!-- Attention, not matching original function -->
+			<control>
+                <group>[Channel1]</group>
+                <key>pregain</key>
+                <status>0xB0</status>
+                <midino>0x21</midino>
+                <options>
+                    <diff/>
+                </options>
+            </control>
+
+<!-- Key 15b (Beats Deck B) -->
+<!-- Attention, not matching original function -->	
+            <control>
+                <group>[Channel2]</group>
+                <key>pregain</key>
+                <status>0xB0</status>
+                <midino>0x22</midino>
+                <options>
+                    <diff/>
+                </options>
+            </control>		
+
+<!-- Loop in, Deck A. Key 16a1 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_in</key>
+                <status>0x90</status>
+                <midino>0x53</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Loop in Deck B, key 16b1 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_in</key>
+                <status>0x90</status>
+                <midino>0x56</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Sample 1 Dec A. Key 16a2 -->
+            <control>
+                <group>[Sampler1]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x65</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control> 
+
+<!-- Sample 1 Dec B. Key 16b2 -->
+			<control>
+                <group>[Sampler1]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x69</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Hotcue 1 Deck A. Key 16a3 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x6D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Hotcue 1 Deck B. Key 16b3 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x71</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Loop Out, Deck A. Key 17a1 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.loop_out</key>
+                <status>0x90</status>
+                <midino>0x54</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Loop Out, Deck B. Key 17b1 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.loop_out</key>
+                <status>0x90</status>
+                <midino>0x57</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Sample 2 Deck A. Key 17a2 -->
+            <control>
+                <group>[Sampler2]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x66</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+ 
+<!-- Sample 2 Deck B. Key 17b2 -->
+			<control>
+                <group>[Sampler2]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x6A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Hotcue 2 Deck A. Key 17a3 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x6E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Hotcue 2 Deck B. Key 17b3 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x72</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Reloop Deck A, key 18a1 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.reloop_exit</key>
+                <status>0x90</status>
+                <midino>0x55</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Reloop Deck B, key 18b1 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.reloop_exit</key>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Sample 3 Deck A. Key 18a2 -->
+            <control>
+                <group>[Sampler3]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x67</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control> 
+
+<!-- Sample 3 Deck B. Key 18b2 -->
+			<control>
+                <group>[Sampler3]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x6B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Hotcue 3 Deck A. Key 18a3 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x6F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Hotcue 3 Deck B. Key 18b3 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x73</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Loop x1/2, Deck A. Key 19a1 -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.loop_halve</key>
+                <status>0x90</status>
+                <midino>0x63</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Loop x1/2, Deck B. Key 19b1 -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.loop_halve</key>
+                <status>0x90</status>
+                <midino>0x64</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Sample 4 Deck A. Key 19a2 -->
+            <control>
+                <group>[Sampler4]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x68</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Sample 4 Deck B. Key 19b2 -->
+			<control>
+                <group>[Sampler4]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x6C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Delete hotcue, Deck A. Key 19a3 -->
+			<control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x70</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- Delete hotcue 3, Deck B. Key 19b3 -->
+			<control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.hotcue</key>
+                <status>0x90</status>
+                <midino>0x74</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- FX1 Deck A. Key 20a -->
+			<control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.fx1_or_auto1</key>
+                <status>0x90</status>
+                <midino>0x59</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+			
+<!-- FX1 Deck B. Key 20b -->	
+			<control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.fx1_or_auto1</key>
+                <status>0x90</status>
+                <midino>0x5D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+			
+<!-- FX2 Deck A. Key 21a -->	
+<!-- Attention, not matching original function -->		
+			<control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.fx2_or_auto2</key>
+                <status>0x90</status>
+                <midino>0x5A</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+			
+<!-- FX2 Deck B. Key 21b -->
+<!-- Attention, not matching original function -->			
+			<control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.fx2_or_auto2</key>
+                <status>0x90</status>
+                <midino>0x5E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+
+<!-- FX3 Deck A. Key 22a -->
+<!-- Attention, not matching original function -->
+			<control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.fx3_or_auto4</key>
+                <status>0x90</status>
+                <midino>0x5B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+			
+<!-- FX3 Deck B. Key 22b -->	
+<!-- Attention, not matching original function -->	
+			<control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.fx3_or_auto4</key>
+                <status>0x90</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>			
+
+<!-- Beat Tap Deck A. Key 23a -->
+<!-- Attention, not matching original function -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.tap_or_auto16</key>
+                <status>0x90</status>
+                <midino>0x5C</midino>
+                <options>
+					<script-binding/>
+                </options>
+            </control>
+
+<!-- Beat Tap Deck B. Key 23b -->
+<!-- Attention, not matching original function -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.tap_or_auto16</key>
+                <status>0x90</status>
+                <midino>0x60</midino>
+                <options>
+					<script-binding/>
+                </options>
+            </control>
+
+<!-- Channel volume Deck A. Key 24a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x16</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Volume changer Deck B, key 24b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x07</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Master Volume. Key 25 -->
+            <control>
+                <group>[Master]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x17</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Cross fader. Key 26 -->
+            <control>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <status>0xB0</status>
+                <midino>0x0A</midino>
+                <options>
+                    <invert/>
+                </options>
+            </control>
+
+<!-- Hi EQ, Deck A. Key 27a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>filterHigh</key>
+                <status>0xB0</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Hi EQ Deck B. Key 27b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>filterHigh</key>
+                <status>0xB0</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Mid EQ, Deck A. Key 28a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>filterMid</key>
+                <status>0xB0</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Mid EQ, Deck B. Key 28b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>filterMid</key>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Lo EQ Deck A. Key 29a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>filterLow</key>
+                <status>0xB0</status>
+                <midino>0x14</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Lo EQ, Deck B. Key 29b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>filterLow</key>
+                <status>0xB0</status>
+                <midino>0x15</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Cue gain (headphone volume). Key 30 -->
+            <control>
+                <group>[Master]</group>
+                <key>headVolume</key>
+                <status>0xB0</status>
+                <midino>0x0B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Cue mix (headphone mix). Key 31 -->
+            <control>
+                <group>[Master]</group>
+                <key>headMix</key>
+                <status>0xB0</status>
+                <midino>0x0C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
+<!-- Stutter Deck A. Key 32a -->
+            <control>
+                <group>[Channel1]</group>
+                <key>NumarkMixTrackProII.stutter</key>
+                <status>0x90</status>
+                <midino>0x4A</midino>
+                <options>
+					<script-binding/>
+                </options>
+            </control>
+
+<!-- Stutter Deck B. Key 32b -->
+            <control>
+                <group>[Channel2]</group>
+                <key>NumarkMixTrackProII.stutter</key>
+                <status>0x90</status>
+                <midino>0x4C</midino>
+                <options>
+					<script-binding/>
+                </options>
+            </control>
+
+        </controls>
+
+        <outputs>
+
+<!-- Beat sync lights. Key 13a and 13b-->
+            <output>
+                <group>[Channel1]</group>
+                <key>beatsync</key>
+                <status>0x90</status>
+                <midino>0x40</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>beatsync</key>
+                <status>0x90</status>
+                <midino>0x47</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+
+<!-- Lights Cue Points. Key 7a and 7b -->
+            <output>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <status>0x90</status>
+                <midino>0x33</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <status>0x90</status>
+                <midino>0x3C</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>			
+
+<!-- Lights Play buttons. Key 5a and 5b -->
+            <output>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x3B</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x42</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+
+<!-- Lights Cue buttons (headphone toggle). Key 6a and 6b -->
+            <output>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x51</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x52</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+
+<!-- Hot Cue -->
+			<output>
+                <group>[Channel1]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x90</status>
+                <midino>0x6D</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output><output>
+                <group>[Channel2]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x90</status>
+                <midino>0x71</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			<output>
+                <group>[Channel1]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x90</status>
+                <midino>0x6E</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			<output>
+                <group>[Channel2]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x90</status>
+                <midino>0x72</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			<output>
+                <group>[Channel1]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x90</status>
+                <midino>0x6F</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			<output>
+                <group>[Channel2]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x90</status>
+                <midino>0x73</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+<!-- Sampler -->
+			<output>
+                <group>[Sampler1]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x65</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			<output>
+                <group>[Sampler2]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x66</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>        
+            <output>
+                <group>[Sampler3]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x67</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+            <output>
+                <group>[Sampler4]</group>
+                <key>start_play</key>
+                <status>0x90</status>
+                <midino>0x68</midino>
+                <on>0x00</on>
+                <off>0x64</off>
+                <maximum>0.1</maximum>
+            </output>
+			
+        </outputs>
+    </controller>
+</MixxxControllerPreset>
