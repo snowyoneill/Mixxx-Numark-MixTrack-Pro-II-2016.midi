@@ -346,12 +346,12 @@
 
 <!-- Key 14b1 (FX1 Knob Deck B) -->
             <control>
-                <group>[Flanger]</group>
-                <key>lfoPeriod</key>
+                <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
                 <status>0xB0</status>
                 <midino>0x1E</midino>
                 <options>
-                    <diff/>
+                    <script-binding/>
                 </options>
             </control>
 
@@ -370,12 +370,12 @@
 <!-- Key 14b2 (FX2 Knob Deck B) -->
 <!-- Attention, not matching original function -->
             <control>
-               <group>[Flanger]</group>
-                <key>lfoDepth</key>
+               <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
                 <status>0xB0</status>
                 <midino>0x1F</midino>
                 <options>
-                    <diff/>
+                    <script-binding/>
                 </options>
             </control>
 
@@ -394,12 +394,12 @@
 <!-- Key 14b3 (FX3 Knob Deck B) -->
 <!-- Attention, not matching original function -->
             <control>
-                <group>[Flanger]</group>
-                <key>lfoDelay</key>
+                <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>NumarkMixTrackProII.fxKnobs</key>
                 <status>0xB0</status>
                 <midino>0x20</midino>
                 <options>
-                    <diff/>
+                    <script-binding/>
                 </options>
             </control>
 

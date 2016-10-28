@@ -118,8 +118,23 @@ NumarkMixTrackProII.init = function(id) {   // called when the MIDI device is op
         var led_names = ["loop_in", "loop_out", "scratch_mode", "tap"];
         for (var i in led_names) {
             NumarkMixTrackProII.setLED(NumarkMixTrackProII.leds[d][led_names[i]], true);
-        }				
-		
+        }		
+
+  	// Turn on fx1 effect rack led to match default mixxx initialisation which is set to true
+    //NumarkMixTrackProII.setLED(NumarkMixTrackProII.leds[1]["fx1"], true);
+    //NumarkMixTrackProII.setLED(NumarkMixTrackProII.leds[2]["fx1"], true);
+
+    // Disable all the effect racks by default
+    var c = "enabled";
+    group = "[EffectRack1_EffectUnit1]"
+    engine.setValue(group, c, 0); 
+    group = "[EffectRack1_EffectUnit2]"
+    engine.setValue(group, c, 0); 
+    group = "[EffectRack1_EffectUnit3]"
+    engine.setValue(group, c, 0); 
+    group = "[EffectRack1_EffectUnit4]"
+    engine.setValue(group, c, 0);    
+
 		engine.setValue("[Channel"+d+"]", "keylock", NumarkMixTrackProII.isKeyLocked[d-1]);
 		
         // Enable soft-takeover for Pitch slider
@@ -589,19 +604,18 @@ NumarkMixTrackProII.fxKnobs = function(channel, control, value, status, group) {
   /* variations */
   //var group = "[QuickEffectRack1_[Channel1]]";
   // var group = "[EqualizerRack1_[Channel1]_Effect1]";
-  var group = "[EffectRack1_EffectUnit1_Effect1]";
+  //var group = "[EffectRack1_EffectUnit1_Effect1]";
   
   /* var group = "[EffectRack1_EffectUnit1]";
    * var c = "super1"
    * super knob - controls all effects in a specified rack
    */
   var c = "parameter1";
-
-  if (control == 0x1B)
+  if (control == 0x1B || control == 0x1E)
     c = "parameter1";
-  else if (control == 0x1C)
+  else if (control == 0x1C || control == 0x1F)
     c = "parameter2";
-  else if (control == 0x1D)
+  else if (control == 0x1D || control == 0x20)
     c = "parameter3";
 
    //get current value
@@ -633,7 +647,10 @@ NumarkMixTrackProII.fx1_or_auto1 = function(channel, control, value, status, gro
         //engine.setValue(group, c, kill);      
 
         var c = "enabled";
-        group = "[EffectRack1_EffectUnit1]"
+        if (control == 0x59)
+          group = "[EffectRack1_EffectUnit1]";
+        else if (control == 0x5D)
+          group = "[EffectRack1_EffectUnit2]";
         var kill = !engine.getValue(group, c);
         engine.setValue(group, c, kill);         
 
