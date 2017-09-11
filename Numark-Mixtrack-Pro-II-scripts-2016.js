@@ -19,6 +19,10 @@
 
 // 10/26/2016 - Changed by Shaun O'Neill
 //              Updated the flanger effects rack. Removed depricated XML controls and added new JS functions to modify the FX knobs
+// 10/10/2017 - Changed by Shaun O'Neill
+//              Added super button control via shift + fx1 knob.
+//              Low frequency filter now doubles as filter effect control via shift key.
+
 
 function NumarkMixTrackProII() {}
 
@@ -148,21 +152,21 @@ NumarkMixTrackProII.init = function(id) {   // called when the MIDI device is op
         engine.connectControl("[Channel"+d+"]",
                               "PeakIndicator",
                               "NumarkMixTrackProII.flash_peak_indicator");
-		/* v.1.12 or above only
+		/* v.1.12 or above only */
         engine.connectControl("[Channel"+d+"]",
                               "play_indicator",
                               "NumarkMixTrackProII.flash_play_button");
         engine.connectControl("[Channel"+d+"]",
                               "cue_indicator",
                               "NumarkMixTrackProII.flash_cue_button");
-		*/	
+			
     }
 		
 	engine.setValue("[Master]", "volume", 0);
 
 }
 
-/*
+
 NumarkMixTrackProII.flash_play_button = function(value, group, control) {
     //print("FLASHING PLAY BUTTON");
     var deck = NumarkMixTrackProII.groupToDeck(group);
@@ -174,7 +178,7 @@ NumarkMixTrackProII.flash_cue_button = function(value, group, control) {
     var deck = NumarkMixTrackProII.groupToDeck(group);
     NumarkMixTrackProII.setLED(NumarkMixTrackProII.leds[deck]['cue'], value > 0);
 }
-*/
+
 
 /* flashed the stutter led on every beat.
  * Cue flashes when near the end of the song
@@ -596,42 +600,94 @@ NumarkMixTrackProII.loop_halve = function(channel, control, value, status, group
     }
 }
 
+/* loop_halve unless shift_is_pressed, then double loop */
+NumarkMixTrackProII.filter = function(channel, control, value, status, group) {
+    var deck = NumarkMixTrackProII.groupToDeck(group);
+
+    if(NumarkMixTrackProII.shift_is_pressed[deck-1]){
+      // script.midiDebug(deck, channel, control, value, status, group);
+
+      var c = "super1"
+      var group = "[QuickEffectRack1_" + group + "]";
+       
+       engine.setValue(group, c, value / 128);
+       // engine.setParameter(group, c, value /128); 
+    }
+    else
+    {
+        var group = "[EqualizerRack1_" + group + "_Effect1]";
+        var c = "parameter1"     
+
+        // script.midiDebug(deck, channel, control, value, status, group);
+        engine.setParameter(group, c, value /128);              
+    }
+}
+
 
 /* loop_halve unless shift_is_pressed, then double loop */
 NumarkMixTrackProII.fxKnobs = function(channel, control, value, status, group) {
-    //var deck = NumarkMixTrackProII.groupToDeck(group);
+
+  var deck = NumarkMixTrackProII.groupToDeck(group);
+
 
   /* variations */
   //var group = "[QuickEffectRack1_[Channel1]]";
   // var group = "[EqualizerRack1_[Channel1]_Effect1]";
   //var group = "[EffectRack1_EffectUnit1_Effect1]";
-  
-  /* var group = "[EffectRack1_EffectUnit1]";
-   * var c = "super1"
-   * super knob - controls all effects in a specified rack
+  // script.midiDebug(channel, control, value, status, group);
+
+  /* Shift + fx1 controls deck super button
    */
-  var c = "parameter1";
-  if (control == 0x1B || control == 0x1E)
-    c = "parameter1";
-  else if (control == 0x1C || control == 0x1F)
-    c = "parameter2";
-  else if (control == 0x1D || control == 0x20)
-    c = "parameter3";
+  if(NumarkMixTrackProII.shift_is_pressed[deck-1]){
+    // script.midiDebug(deck, channel, control, value, status, group);
+    if (control == 0x1B || control == 0x1E)
 
-   //get current value
-   //var paramVal = engine.getValue(group, c);
-   var paramVal = engine.getParameter(group, c); // use getParameter instead of getValue
+    /* var group = "[EffectRack1_EffectUnit1]";
+     * var c = "super1"
+     * super knob - controls all effects in a specified rack
+     */
+     var c = "super1"
+     group = "[EffectRack1_EffectUnit" + deck + "]";
+     var paramVal = engine.getParameter(group, c);
+     if (value == 0x01) { //value is increasing
+         paramVal = paramVal+0.05;
+      } else { //going down
+         paramVal = paramVal-0.05;
+      }
+      //engine.setValue(group, c, paramVal);
+      engine.setParameter(group, c, paramVal);
+  }
+  else {
+    var group = null
+    if(deck == 1)
+      var group = "[EffectRack1_EffectUnit1_Effect1]";
+    else if(deck == 2)
+      var group = "[EffectRack1_EffectUnit2_Effect1]";
 
-   if (value == 0x01) { //value is increasing
-       paramVal = paramVal+0.05;
-    } else { //going down
-       paramVal = paramVal-0.05;
-    }
 
-   //set the value
-   //engine.setValue(group, c, paramVal);
-   engine.setParameter(group, c, paramVal); // use setParameter instead of getValue
-                                            // if setValue flanger para2, para3 knobs dont work
+    var c = "parameter1";
+    if (control == 0x1B || control == 0x1E)
+      c = "parameter1";
+    else if (control == 0x1C || control == 0x1F)
+      c = "parameter2";
+    else if (control == 0x1D || control == 0x20)
+      c = "parameter3";
+
+     //get current value
+     //var paramVal = engine.getValue(group, c);
+     var paramVal = engine.getParameter(group, c); // use getParameter instead of getValue
+
+     if (value == 0x01) { //value is increasing
+         paramVal = paramVal+0.05;
+      } else { //going down
+         paramVal = paramVal-0.05;
+      }
+
+     //set the value
+     //engine.setValue(group, c, paramVal);
+     engine.setParameter(group, c, paramVal); // use setParameter instead of getValue
+                                              // if setValue flanger para2, para3 knobs dont work
+  }                                            
 }
 
 
